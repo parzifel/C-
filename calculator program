@@ -1,0 +1,91 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+ int jiafa(float a,float b)
+ {
+  float sum,x;
+
+  printf("%f+%f",a,b);
+  printf("请输入答案\n");
+  scanf("%f",&x);
+  sum=a+b;
+  if(x==sum) printf("恭喜你答对了\n");
+  else{
+  printf("很遗憾你答错了，正确答案是：%f\n",sum);
+  }
+
+  
+
+ }
+ int jianfa(float a,float b)
+ {
+  float a1,a2,sum,x;
+  printf("%f-%f",a,b);
+  printf("请输入答案\n");
+  scanf("%f",&x);
+  sum=a-b;
+  if(x==sum) printf("恭喜你答对了\n");
+  else{
+  printf("很遗憾你答错了，正确答案是：%f\n",sum);
+  }
+
+  
+
+ }
+ int chengfa (float a,float b)
+ {
+  float sum,x;
+  printf("%f*%f",a,b);
+  printf("请输入答案\n");
+  scanf("%f",&x);
+  sum=a*b;
+  if(x==sum) printf("恭喜你答对了\n");
+ else{
+  printf("很遗憾你答错了，正确答案是：%f\n",sum);
+  }
+
+ 
+
+  
+
+ }
+
+ int chufa(float a,float b)
+ {
+  float sum,x;
+  printf("%f/%f",b,a);
+  printf("请输入答案\n");
+  scanf("%f",&x);
+  sum=b/a;
+  if(x==sum) printf("恭喜你答对了\n");
+ else{
+  printf("很遗憾你答错了，正确答案是：%f\n",sum);
+
+ }
+
+}
+
+
+
+ int main ()
+
+{
+  int x;
+  float a1,a2;
+  printf("******************\n");
+ printf("*小学数学测试系统*\n");
+ printf("*1加法运算********\n");
+ printf("*2减法运算********\n");
+ printf("*3乘法运算********\n");
+ printf("*4除法运算********\n");
+ printf("*0退出运算********\n");
+ scanf("%d",&x);
+
+  srand((unsigned)time(NULL));
+  a1=rand()%100;
+  a2=rand()%100+1;
+  if(x==1) jiafa(a1,a2);
+  if(x==2) jianfa(a1,a2);
+  if(x==3) chengfa(a1,a2);
+  if(x==4) chufa(a1,a2);
+}
